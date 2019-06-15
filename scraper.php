@@ -19,7 +19,8 @@
 // // An arbitrary query against the database
 // scraperwiki::select("* from data where 'name'='peter'")
 
-$key="[API KEY]";
+$apikey = getenv('MORPH_API_KEY');
+$key=$apikey;
 $query="select * from 'data' limit 10";
 $url = "https://api.morph.io/[USERNAME]/[SCRAPER NAME]/data.json";
 
