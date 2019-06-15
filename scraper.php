@@ -28,6 +28,6 @@ $response=file_get_contents($url.'?key='.$key.'&query='.urlencode($query));
 $js=json_decode($response,true);
 
 foreach ($js as $line){
-  [DO WIZARDRY]
+ print_r($line);
 }
 ?>
