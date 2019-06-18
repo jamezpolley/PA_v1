@@ -5,7 +5,7 @@ require 'scraperwiki.php';
 
 $apikey = getenv('MORPH_API_KEY');
 $key=$apikey;
-$query="select * from 'data' limit 30";
+$query="select * from 'data'";
 
 $success=0;
 
@@ -13,7 +13,6 @@ $success=0;
 $url = "https://api.morph.io/lowndsy/PA-v7/data.json";
 $response=file_get_contents($url.'?key='.$key.'&query='.urlencode($query));
 $js=json_decode($response,true);
-print_r($js);
 echo count($js)." - ";
 foreach ($js as $line)
 {
