@@ -25,7 +25,17 @@
 
 $apikey = getenv('MORPH_API_KEY');
 $key=$apikey;
-$query="select * from 'data' limit 10";
+$query="select * from 'data'";
+
+
+$url = "https://api.morph.io/lowndsy/PA-v6/data.json";
+$response=file_get_contents($url.'?key='.$key.'&query='.urlencode($query));
+$js=json_decode($response,true);
+
+foreach ($js as $line)
+{
+ scraperwiki::save(array('prikey'), $line);
+}
 
 $url = "https://api.morph.io/lowndsy/PA-v7/data.json";
 $response=file_get_contents($url.'?key='.$key.'&query='.urlencode($query));
@@ -33,7 +43,26 @@ $js=json_decode($response,true);
 
 foreach ($js as $line)
 {
- print_r($line);
  scraperwiki::save(array('prikey'), $line);
 }
+
+$url = "https://api.morph.io/lowndsy/PA-v8/data.json";
+$response=file_get_contents($url.'?key='.$key.'&query='.urlencode($query));
+$js=json_decode($response,true);
+
+foreach ($js as $line)
+{
+ scraperwiki::save(array('prikey'), $line);
+}
+
+$url = "https://api.morph.io/lowndsy/PA-v9/data.json";
+$response=file_get_contents($url.'?key='.$key.'&query='.urlencode($query));
+$js=json_decode($response,true);
+
+foreach ($js as $line)
+{
+ scraperwiki::save(array('prikey'), $line);
+}
+
+echo 'Complete';
 ?>
