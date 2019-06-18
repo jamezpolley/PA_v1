@@ -10,7 +10,7 @@ $query="select * from 'data'";
 $success=0;
 
 
-$url = "https://api.morph.io/lowndsy/PA-v7/data.json";
+$url = "https://api.morph.io/lowndsy/PA-v6/data.json";
 $response=file_get_contents($url.'?key='.$key.'&query='.urlencode($query));
 $js=json_decode($response,true);
 echo count($js)." - ";
