@@ -7,6 +7,7 @@ $apikey = getenv('MORPH_API_KEY');
 $key=$apikey;
 $query="select * from 'data'";
 
+$success=0;
 
 
 $url = "https://api.morph.io/lowndsy/PA-v7/data.json";
@@ -16,6 +17,7 @@ echo count($js)." - ";
 foreach ($js as $line)
 {
 scraperwiki::save(array('prikey'), $line);
+$success++; 
 }
 unset($js);
 echo $success.". 
