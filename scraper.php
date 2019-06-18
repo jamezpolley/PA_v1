@@ -35,8 +35,10 @@ $response=file_get_contents($url.'?key='.$key.'&query='.urlencode($query));
 $js=json_decode($response,true);
 foreach ($js as $line)
 {
- scraperwiki::save(array('prikey'), $line);
+// scraperwiki::save(array('prikey'), $line);
 }
+scraperwiki::save(array('prikey'), $js);
+unset($js);
 
 
 
@@ -46,8 +48,10 @@ $response=file_get_contents($url.'?key='.$key.'&query='.urlencode($query));
 $js=json_decode($response,true);
 foreach ($js as $line)
 {
- scraperwiki::save(array('prikey'), $line);
+// scraperwiki::save(array('prikey'), $line);
 }
+scraperwiki::save(array('prikey'), $js);
+unset($js);
 
 
 
@@ -58,8 +62,10 @@ $response=file_get_contents($url.'?key='.$key.'&query='.urlencode($query));
 $js=json_decode($response,true);
 foreach ($js as $line)
 {
- scraperwiki::save(array('prikey'), $line);
+// scraperwiki::save(array('prikey'), $line);
 }
+scraperwiki::save(array('prikey'), $js);
+unset($js);
 
 
 
@@ -70,9 +76,10 @@ $response=file_get_contents($url.'?key='.$key.'&query='.urlencode($query));
 $js=json_decode($response,true);
 foreach ($js as $line)
 {
- scraperwiki::save(array('prikey'), $line);
+// scraperwiki::save(array('prikey'), $line);
 }
-
+scraperwiki::save(array('prikey'), $js);
+unset($js);
 
 
 echo 'Complete';
