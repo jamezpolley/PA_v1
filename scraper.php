@@ -22,7 +22,7 @@
 $apikey = getenv('MORPH_API_KEY');
 $key=$apikey;
 $query="select * from 'data' limit 10";
-$url = "https://api.morph.io/[USERNAME]/[SCRAPER NAME]/data.json";
+$url = "https://api.morph.io/lowndsy/PA-v7/data.json";
 
 $response=file_get_contents($url.'?key='.$key.'&query='.urlencode($query));
 $js=json_decode($response,true);
