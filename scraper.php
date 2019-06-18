@@ -18,7 +18,7 @@ $js=json_decode($response,true);
 echo count($js)." - ";
 foreach ($js as $line)
 {
-scraperwiki::save(array('prikey'), $line);
+scraperwiki::save(array('prikey','page'), $line);
 $success++; 
 }
 unset($js);
