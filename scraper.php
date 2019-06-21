@@ -22,7 +22,7 @@ unset($js);
 echo $success.". 
 ";
 
-R::debug()
+R::debug();
 
 $url = "https://api.morph.io/lowndsy/PA-v7/data.json";
 $response=file_get_contents($url.'?key='.$key.'&query='.urlencode($query));
